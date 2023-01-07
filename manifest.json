@@ -1,0 +1,38 @@
+
+{
+  "name": "Rick Roll Extension",
+  "description": "This extension Rick Rolls you!",
+  "author": "Qwerty Software",
+  "version": "1.4.0",
+  "manifest_version": 2,
+
+  "chrome_url_overrides" : {
+    "newtab": "popup.html"
+  },
+
+  "icons": {
+    "16": "/icons/icon16.png",
+    "48": "/icons/icon48.png",
+    "128": "/icons/icon128.png"
+  },
+  
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["script.js"]
+    }
+  ],
+  "web_accessible_resources": ["popup.html", "video.mp4", "script.js", "icons/favicon.png"],
+
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": ""
+    }
+  }
+
+}
